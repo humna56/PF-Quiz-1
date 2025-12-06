@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int N,i,pages;
+    double const costperpage=1.5;
+    double totalcost=0,cost;
+    cout<<"enter number of book order";
+    cin>>N;
+    for(i=1;i<=N;i++){
+    cout<<"enter number of book pages"<<i;
+    cin>>pages;
+    cost=pages*costperpage;
+    if(pages>300){
+    cost=cost-(cost*0.05);
+    }
+    cout<<"total cost of book is"<<i<<cost<<endl;
+    totalcost+=cost;
+    }
+    cout<<"total printing cost="<<totalcost<<endl;
+
+    return 0;
+}

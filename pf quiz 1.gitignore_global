@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i,N;
+    cout<<"enter the value of N";
+    cin>>N;
+    double totalsum=0;
+    int priceperpage=5;
+    for(i=1;i<=N;i++) 
+    {
+    int pages;
+    cout<<"enter number of pages for job"<<i;
+    cin>>pages;
+    double amount=pages*priceperpage; 
+    if(pages>80)
+    {
+    amount=amount-(amount*0.01);
+    }
+    cout<<"amount for job is"<<i<<endl;
+    totalsum +=amount;
+    }
+    cout<<"total sum is"<<totalsum<<endl;
+    return 0;
+}
